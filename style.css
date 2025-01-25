@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'saiba-45'; /* Name you'll use in your CSS */
+    src: url('SAIBA-45.otf') format('opentype'); /* Modern browsers */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal;  /* Specify the font style */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,9 +34,33 @@ header {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    /* gap: 10px; */
     margin-top: 20%;
+    padding: 1rem;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.406);
+    font-family: 'saiba-45';
+
+    font-size: 5vw;
+}
+.logo p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(80% - 1rem);
+    padding: 0;
+    font-size: 0.7em; /* Scales font size relative to the width of the container */
+    color: #9ab200;
+}
+.logo > img {
+    width: calc(30% - 1rem);
+    padding: 5px;
+    display: block;
+    /* max-width: 90px; */
+    height: auto;
+    aspect-ratio: 1;
 }
 
 .attribution {
