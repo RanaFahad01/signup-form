@@ -7,13 +7,11 @@
     <title>ZMeet Sign-Up</title>
 </head>
 <body>
-    <!-- Image attribution
-     Photo by <a href="https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Dumlao</a> on <a href="https://unsplash.com/photos/ocean-wave-in-shallow-focus-lens-ciO5L8pin8A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-       -->
 
     <header>
         <div class="logo">
-
+            <img src="globe.png" alt="globe logo">
+            <p>World Tours</p>
         </div>
         <p class="attribution">
             Photo by <a href="https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Dumlao</a> on <a href="https://unsplash.com/photos/ocean-wave-in-shallow-focus-lens-ciO5L8pin8A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
@@ -21,7 +19,51 @@
     </header>
 
     <main>
+        <div class="preamble">
+            <p>
+                Have you ever wanted to see the world? Now's your chance to realize your deepest dream!
+            </p>
+            <p>
+                Sign up <em>now</em> to get started!
+            </p>
+        </div>
 
+        <div class="signup">
+            <p class="greeting">Lets do this!</p>
+            <form action="/example-webpage" method="post">
+                <p class="field">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="firstName">
+                </p>
+
+                <p class="field">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="lastName">
+                </p>
+                <p class="field">
+                    <label for="email-address">EMAIL</label>
+                    <input type="email" id="email-address" name="emailAddress">
+                </p>
+                <p class="field">
+                    <label for="ph-number">PHONE NUMBER</label>
+                    <input type="tel" id="ph-number" name="phNumber">
+                </p>
+                <p class="field">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password">
+                </p>
+                <p class="field">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirmPassword">
+                </p>
+            <!-- </form> -->
+        </div>
+
+        <div class="signup-actions">
+            <!-- <button type="submit">Hello</button> -->
+        </form>
+
+        </div>
     </main>
 </body>
 </html>
