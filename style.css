@@ -1,15 +1,26 @@
 @font-face {
     font-family: 'saiba-45'; /* Name you'll use in your CSS */
-    src: url('SAIBA-45.otf') format('opentype'); /* Modern browsers */
+    src: url('./fonts/SAIBA-45.otf') format('opentype'); /* Modern browsers */
     font-weight: normal; /* Specify the font weight */
     font-style: normal;  /* Specify the font style */
+}
+
+@font-face {
+    font-family: 'geomanist'; /* Name you'll use in your CSS */
+    src: url('./fonts/geomanist-regular-webfont.woff') format('woff'); /* Modern browsers */
+    font-weight: normal; /* Specify the font weight */
+    font-style: normal;  /* Specify the font style */
+}
+
+:root {
+    --GREEN-COLOR: #253534;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body,html {
@@ -66,9 +77,150 @@ header {
 .attribution {
     text-align: center;
     padding: 0.5rem;
+    margin-bottom: 0.3rem;
     color: whitesmoke;
 }
 .attribution > a {
     color: aqua;
 }
 
+main {
+    background-color: #F0FFF0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'geomanist';
+
+}
+
+.preamble {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 30%;
+
+    justify-content: flex-end;
+    padding: 2rem;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.signup {
+    z-index: 1;
+    background-color: #f7fff7;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+
+    padding: 1rem 6rem 2rem 1.5rem;
+    min-height: 40%;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.signup .greeting {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+}
+
+form {
+    --GAP: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70%;
+    max-width: 800px;
+    gap: var(--GAP);
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+    width: clamp(100px, calc(50% - var(--GAP)), 200px);
+
+    padding: 0.5rem;
+    gap: 5px;
+
+}
+
+.field label {
+    color: rgb(32, 32, 32);
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.field label[aria-required="true"]::after {
+    content: "*";
+    color: red;
+    font-weight: normal;
+}
+
+.field input {
+    padding: 0.5em;
+    font-family: 'geomanist';
+    border-radius: 3px;
+    border: 1px solid rgb(32, 32, 32);
+    transition: 0.3s all ease-in-out;
+    outline: none;
+
+    letter-spacing: 1px;
+}
+
+.field input:focus {
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* .field input:invalid {
+    border: 2px solid orangered;
+    outline: none;
+} */
+
+.final-container {
+    background-color: #F0FFF0;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0.5rem;
+}
+
+.final-container button, .final-container p {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.final-container button {
+    width: fit-content;
+    font-size: 1rem;
+    padding: 0.5em 3em;
+
+    border-radius: 4px;
+    background-color: var(--GREEN-COLOR);
+    color: #f7fff7;
+    border: 1px solid #f7fff7;
+    font-weight: 500;
+
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+}
+
+.final-container button:hover, .final-container button:focus {
+    background-color: #f7fff7;
+    color: var(--GREEN-COLOR);
+    border: 1px solid var(--GREEN-COLOR);
+    /* font-weight: bold; */
+}
+
+.final-container p {
+    font-size: 0.9rem;
+}
+
+.login-prompt a {
+    color: var(--GREEN-COLOR);
+    font-weight: bold;
+}

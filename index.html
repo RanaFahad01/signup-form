@@ -30,15 +30,15 @@
 
         <div class="signup">
             <p class="greeting">Lets do this!</p>
-            <form action="/example-webpage" method="post">
+            <form action="#" method="post">
                 <p class="field">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="firstName">
+                    <label for="first-name" aria-required="true">FIRST NAME</label>
+                    <input type="text" id="first-name" name="firstName" required>
                 </p>
 
                 <p class="field">
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" name="lastName">
+                    <label for="last-name" aria-required="true">LAST NAME</label>
+                    <input type="text" id="last-name" name="lastName" required>
                 </p>
                 <p class="field">
                     <label for="email-address">EMAIL</label>
@@ -49,18 +49,19 @@
                     <input type="tel" id="ph-number" name="phNumber">
                 </p>
                 <p class="field">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
+                    <label for="password" aria-required="true">PASSWORD</label>
+                    <input type="password" id="password" name="password" required>
                 </p>
                 <p class="field">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="confirmPassword">
+                    <label for="confirm-password" aria-required="true">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirmPassword" required>
                 </p>
             <!-- </form> -->
         </div>
 
-        <div class="signup-actions">
-            <!-- <button type="submit">Hello</button> -->
+        <div class="final-container">
+            <button type="submit">Create Account</button>
+            <p class="login-prompt">Already have an account? <a href="#">Log in</a></p>
         </form>
 
         </div>
