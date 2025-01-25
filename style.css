@@ -173,13 +173,11 @@ form .field {
 
 .field input:focus {
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    outline: none;
 }
 
-/* .field input:invalid {
-    border: 2px solid orangered;
-    outline: none;
-} */
+.field input:invalid {
+    border: 1px solid orangered;
+}
 
 .final-container {
     background-color: #F0FFF0;
